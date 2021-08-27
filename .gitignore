@@ -1,0 +1,64 @@
+# Ignore some files and directories from the custom directory.
+/custom/history
+/custom/blowfish
+/custom/modulebuilder/builds
+/custom/modulebuilder/packages
+/custom/working
+/custom/modules/*/Ext
+/custom/application/Ext
+/custom/modules/*/*/Ext
+
+# Custom configuration should also be ignored.
+/.env
+/docker/**/.env
+/config.php
+/config_override.php
+/config_si.php
+/portal2/config.js
+/custom/modules/Connectors/metadata/connectors.php
+
+# Coverage/unit test reports
+/reports
+
+# The silent upgrade scripts aren't needed.
+/silentUpgrade*.php
+
+# Composer
+# /custom/composer.lock
+# /custom/vendor
+
+# Workflow is stored in the DB and written to disk as cache, don't commit it
+/custom/modules/*/workflow/
+
+xhprof
+xhprof_lib
+/upload
+
+# Stardard filesystem cruft
+.DS_Store
+.idea
+*.bak
+*.orig
+*.swp
+*.log
+*.out
+.tags*
+tags
+oracle.sqlite
+sftp-config.json
+.nfs*
+.vscode
+
+# Don't commit the cache folder
+/cache
+!/cache/index.html
+
+# These folders are created and maintained by the seedbed tool
+/tests/end-to-end/node_modules/
+/tests/end-to-end/results/
+/tests/end-to-end/results_failures/
+/tests/end-to-end/tmp/
+
+# serverless plugin directory
+node_modules
+.serverless/
